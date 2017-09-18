@@ -7,20 +7,19 @@ html
         link(rel='stylesheet', href='/bootstrap/dist/css/bootstrap.css')
         link(rel='stylesheet', href='/stylesheets/style.css')
     body
-        div(class='blog-masthead')
-            div(class='container')
-                nav(class='blog-nav')
-                    a(href='#', class='blog-nav-item active')='首页'
-                    a(href='#', class='blog-nav-item')='文章'
-                    a(href='#', class='blog-nav-item')='ABOUT'
+        .blog-masthead
+            .container
+                nav.blog-nav
+                    a.blog-nav-item(href='/', class=route==='index'?'active':'') 首页
+                    a.blog-nav-item(href='/about', class=route==='about'?'active':'') ABOUT
 
-        div(class='container')
-            div(class='p10_0')
+        .container
+            .p10_0
                 block content
 
-        footer(class='blog-footer')
-            p='Blog template built for'
-                a(href='http://www.bootcss.com/')=' Bootstarp'
-                =' by '
-                a(href='javascript:;')='@ab1'
+        footer.blog-footer
+            p Blog template built for
+                a(href='http://www.bootcss.com/')  Bootstarp
+                |  by
+                a(href='javascript:;')  @ab1
 

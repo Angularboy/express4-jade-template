@@ -1,5 +1,10 @@
 extends layout
 
 block content
-  h1= doc_content.title
-  p Welcome to #{doc_content.title}
+  if (route === 'index')
+    h1 首页
+    p #{router}
+  - var items = [{name:'首页',route:'/'},{name:'关于我们',route:'/about'}]
+  each item, i in items
+    li
+      a(href=item.route) #{item.name}
