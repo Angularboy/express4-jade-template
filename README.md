@@ -1,1 +1,4 @@
-# express4-jade-template
+# 使用注意事项
+1.运行环境配置
+2.路由规则
+3.jade模版渲染
