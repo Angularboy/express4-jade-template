@@ -1,0 +1,26 @@
+doctype html
+html
+    head
+        title= doc_content.title
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel='shortcut icon', href='/favicon.ico', type='image/x-icon')
+        link(rel='stylesheet', href='/bootstrap/dist/css/bootstrap.css')
+        link(rel='stylesheet', href='/stylesheets/style.css')
+    body
+        div(class='blog-masthead')
+            div(class='container')
+                nav(class='blog-nav')
+                    a(href='#', class='blog-nav-item active')='首页'
+                    a(href='#', class='blog-nav-item')='文章'
+                    a(href='#', class='blog-nav-item')='ABOUT'
+
+        div(class='container')
+            div(class='p10_0')
+                block content
+
+        footer(class='blog-footer')
+            p='Blog template built for'
+                a(href='http://www.bootcss.com/')=' Bootstarp'
+                =' by '
+                a(href='javascript:;')='@ab1'
+
